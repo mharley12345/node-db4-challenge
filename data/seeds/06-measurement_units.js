@@ -1,12 +1,11 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('recipe').del()
+  return knex('measurement_units').del()
     .then(function () {
       // Inserts seed entries
-      return knex('recipe').insert([
-        {recipe_id:1,name:"popcorn"}
-        
+      return knex('measurement_units').insert([
+         {measurement_id:1,description:"bag"}
       ]);
     });
 };

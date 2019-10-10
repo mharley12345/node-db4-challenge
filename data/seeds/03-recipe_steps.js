@@ -5,7 +5,10 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('recipe_steps').insert([
-           {step_id:1,step_number:1,ingredient_id:1,ingredient_qty:1,recipe_id:1}
+           {step_id:1,instructions:'take popcorn out of wrapper'},
+           {step_id:2,instructions:"put popcorn in microwave for 2-4 minutes"},
+           {step_id:3,instructions:"take popcorn out shake well season "},
+           {step_id:4,instructions:"enjoy"}
       ]);
     });
 };

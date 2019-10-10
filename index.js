@@ -1,3 +1,4 @@
+require('dotenv').config() //loads env variables
 const server = require('./api/server')
 
 

@@ -1,11 +1,16 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('ingredients').del()
+  return knex('recipe_ingredients').del()
     .then(function () {
       // Inserts seed entries
-      return knex('ingredients').insert([
-         {id:1,name:"popcorn",qty:'1'}
+      return knex('recipe_ingredients').insert([
+         {recipe_id:1,measurement_id:1,measurement_qty_id:1,ingredient_id:1,steps_id:1},
+         {recipe_id:1,measurement_id:1,measurement_qty_id:1,ingredient_id:1,steps_id:2},
+         {recipe_id:1,measurement_id:1,measurement_qty_id:1,ingredient_id:1,steps_id:3},
+         {recipe_id:1,measurement_id:1,measurement_qty_id:1,ingredient_id:1,steps_id:4},
+    
+
       ]);
     });
 };
