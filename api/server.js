@@ -2,7 +2,7 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 const server = express()
-
+const RecipeRouter = require('../routes/recipeRouter')
 server.use(helmet())
 server.use(express.json())
 server.use(cors())
@@ -16,5 +16,5 @@ function logger(req, res, next) {
     console.log(`a ${method} request to ${url} was made at ${time} o'clock.`)
     next()
   };
-  
+  server.use('/api/recipes',RecipeRouter)
 module.exports = server

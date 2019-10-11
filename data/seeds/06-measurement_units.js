@@ -5,7 +5,8 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('measurement_units').insert([
-         {measurement_id:1,description:"bag"}
+         {measurement_id:1,description:"bag"},
+         {measurement_id:2,description:"cereal"}
       ]);
     });
 };
